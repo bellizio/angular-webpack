@@ -1,0 +1,16 @@
+# misc
+.DS_Store
+*.log
+
+# third party dependencies
+node_modules/
+bower_components/
+jspm_packages/
+typings/
+
+# build directories
+dev/
+dist/
+
+# editor files
+*.sublime-workspace
