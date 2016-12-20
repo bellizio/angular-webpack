@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
-    "start": "webpack-dev-server --inline --progress --port 8080"
+    "start": "webpack-dev-server --inline --progress --open --port 8080"
   },
   "dependencies": {
     "@angular/common": "~2.3.0",
