@@ -20,6 +20,16 @@ module.exports = webpackMerge(commonConfig, {
     minimize: false // workaround for ng2
   },
 
+  module: {
+    loaders: [
+      {
+        test: /\.scss$/,
+        include: helpers.root('src', 'assets', 'css'),
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!sass?sourceMap')
+      }
+    ]
+  },
+
   plugins: [
     new webpack.NoErrorsPlugin(),
     new webpack.optimize.DedupePlugin(),

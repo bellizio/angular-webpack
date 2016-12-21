@@ -4,13 +4,23 @@ var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 
 module.exports = webpackMerge(commonConfig, {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'inline-source-map',
 
   output: {
     path: helpers.root('dist'),
     publicPath: 'http://localhost:8080/',
     filename: '[name].js',
     chunkFilename: '[id].chunk.js'
+  },
+
+  module: {
+    loaders: [
+      {
+        test: /\.scss$/,
+        include: helpers.root('src', 'assets', 'css'),
+        loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
+      }
+    ]
   },
 
   plugins: [
