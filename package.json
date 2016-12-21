@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
-    "start": "webpack-dev-server --inline --progress --open --port 8080",
+    "start": "webpack-dev-server --inline --hot --progress --open --port 8080",
     "test": "karma start"
   },
   "dependencies": {
@@ -23,6 +23,8 @@
     "@angular/platform-browser-dynamic": "~2.3.0",
     "@angular/router": "~3.3.0",
     "@angular/upgrade": "~2.3.0",
+    "@angularclass/hmr": "^1.2.2",
+    "@angularclass/hmr-loader": "^3.0.2",
     "core-js": "^2.4.1",
     "rxjs": "5.0.0-rc.4",
     "zone.js": "^0.7.2"
