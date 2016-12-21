@@ -1,6 +1,6 @@
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { removeNgStyles, createNewHosts, createInputTransfer, bootloader } from '@angularclass/hmr';
+import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
 
 import { AppComponent } from './app.component';
 
