@@ -9,7 +9,7 @@
     "url": "https://github.com/bellizio/angular2-webpack.git"
   },
   "scripts": {
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "build:prod": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
     "serve:prod": "npm run build && http-server dist",
     "start": "webpack-dev-server --inline --hot --progress --open --port 8080",
     "test": "karma start"
