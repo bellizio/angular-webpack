@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 
 export class AppModule {
   constructor(public appRef: ApplicationRef) {}
+
   hmrOnInit(store: any) {
     if (!store || !store.state) return;
     console.log('HMR store', store);
@@ -28,6 +29,7 @@ export class AppModule {
     delete store.state;
     delete store.restoreInputValues;
   }
+
   hmrOnDestroy(store: any) {
     var cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
     // recreate elements
@@ -41,6 +43,7 @@ export class AppModule {
     // remove styles
     removeNgStyles();
   }
+
   hmrAfterDestroy(store: any) {
     // display new elements
     store.disposeOldHosts()
