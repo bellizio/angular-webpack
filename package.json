@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build:prod": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
-    "serve:prod": "npm run build && http-server dist",
+    "serve:prod": "npm run build:prod && http-server dist",
     "start": "webpack-dev-server --inline --hot --progress --open --port 8080",
     "test": "karma start"
   },
