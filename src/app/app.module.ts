@@ -36,7 +36,6 @@ export class AppModule {
     store.disposeOldHosts = createNewHosts(cmpLocation)
     // inject your AppStore and grab state then set it on store
     // var appState = this.AppStore.get()
-    store.state = {data: 'yolo'};
     // store.state = Object.assign({}, appState)
     // save input values
     store.restoreInputValues  = createInputTransfer();
