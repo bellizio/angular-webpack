@@ -53,7 +53,7 @@ module.exports = webpackMerge(commonConfig, {
       }
     }),
     new ngToolsWebpack.AotPlugin({
-      tsConfigPath: helpers.root('tsconfig.aot.json'),
+      tsConfigPath: helpers.root('tsconfig.json'),
       entryModule: helpers.root('src', 'app', 'app.module#AppModule'),
       mainPath: helpers.root('src', 'app', 'main.ts')
     })
