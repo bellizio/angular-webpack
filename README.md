@@ -16,8 +16,8 @@ An Angular 2 starter kit with [Webpack](https://webpack.github.io/)
 
 This is an Angular 2 Webpack starter kit based on the official [Angular Webpack guide](https://angular.io/docs/ts/latest/guide/webpack.html). It includes everything detailed in the guide with a few modifications in order to incorporate the following:
 
-* [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement.html)
-* [Ahead-of-Time Compilation](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html)
+* [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement.html) (for development)
+* [Ahead-of-Time Compilation](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html) (for production)
 * Sass
 
 ## Scripts
