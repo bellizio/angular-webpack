@@ -18,7 +18,7 @@ export class AppModule {
   hmrOnInit(store: any) {
     if (!store || !store.state) return;
     console.log('HMR store', store);
-    console.log('store.state.data:', store.state.data)
+    console.log('store.state.data:', store.state.data);
     // inject AppStore here and update it
     // this.AppStore.update(store.state)
     if ('restoreInputValues' in store) {
@@ -33,7 +33,7 @@ export class AppModule {
   hmrOnDestroy(store: any) {
     var cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
     // recreate elements
-    store.disposeOldHosts = createNewHosts(cmpLocation)
+    store.disposeOldHosts = createNewHosts(cmpLocation);
     // inject your AppStore and grab state then set it on store
     // var appState = this.AppStore.get()
     // store.state = Object.assign({}, appState)
@@ -45,7 +45,7 @@ export class AppModule {
 
   hmrAfterDestroy(store: any) {
     // display new elements
-    store.disposeOldHosts()
+    store.disposeOldHosts();
     delete store.disposeOldHosts;
     // anything you need done the component is removed
   }
