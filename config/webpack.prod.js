@@ -19,7 +19,8 @@ module.exports = webpackMerge(commonConfig, {
     loaders: [
       {
         test: /\.ts$/,
-        loader: '@ngtools/webpack'
+        loader: '@ngtools/webpack',
+        exclude: [/\.(spec|e2e)\.ts$/]
       },
       {
         test: /\.scss$/,
