@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var helpers = require('./helpers');
 
 module.exports = {
   entry: {
@@ -26,6 +27,11 @@ module.exports = {
   },
 
   plugins: [
+    // see https://github.com/angular/angular/issues/11580
+    new webpack.ContextReplacementPlugin(
+      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+      helpers.root('src')
+    ),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']
     }),
