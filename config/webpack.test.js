@@ -9,26 +9,26 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.ts$/,
-        loaders: [
+        use: [
           'awesome-typescript-loader',
           'angular2-template-loader'
         ]
       },
       {
         test: /\.html$/,
-        loader: 'html-loader'
+        use: 'html-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        loader: 'null-loader'
+        use: 'null-loader'
       },
       {
         test: /\.scss$/,
         include: helpers.root('src', 'assets', 'css'),
-        loader: 'null-loader'
+        use: 'null-loader'
       }
     ]
   },

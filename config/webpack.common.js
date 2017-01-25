@@ -14,14 +14,14 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.html$/,
-        loader: 'html-loader'
+        use: 'html-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        loader: 'file-loader?name=assets/images/[name].[hash].[ext]'
+        use: 'file-loader?name=assets/images/[name].[hash].[ext]'
       }
     ]
   },

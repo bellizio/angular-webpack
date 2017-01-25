@@ -16,15 +16,16 @@ module.exports = webpackMerge(commonConfig, {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.ts$/,
-        loader: '@ngtools/webpack',
+        use: '@ngtools/webpack',
         exclude: [/\.(spec|e2e)\.ts$/]
       },
       {
         test: /\.scss$/,
         include: helpers.root('src', 'assets', 'css'),
+        // use 'loader' syntax here, see: https://github.com/webpack/extract-text-webpack-plugin/issues/265
         loader: ExtractTextPlugin.extract({
           fallbackLoader: 'style-loader',
           loader: 'css-loader!sass-loader'
@@ -34,7 +35,7 @@ module.exports = webpackMerge(commonConfig, {
   },
 
   plugins: [
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.UglifyJsPlugin({ // https://github.com/angular/angular/issues/10618
       mangle: {
         keep_fnames: true

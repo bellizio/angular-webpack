@@ -14,10 +14,10 @@ module.exports = webpackMerge(commonConfig, {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.ts$/,
-        loaders: [
+        use: [
           '@angularclass/hmr-loader',
           'awesome-typescript-loader',
           'angular2-template-loader'
@@ -27,7 +27,7 @@ module.exports = webpackMerge(commonConfig, {
       {
         test: /\.scss$/,
         include: helpers.root('src', 'assets', 'css'),
-        loaders: [
+        use: [
           'style-loader',
           'css-loader?sourceMap',
           'sass-loader?sourceMap'
