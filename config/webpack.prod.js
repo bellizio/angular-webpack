@@ -26,9 +26,9 @@ module.exports = webpackMerge(commonConfig, {
         test: /\.scss$/,
         include: helpers.root('src', 'assets', 'css'),
         // use 'loader' syntax here, see: https://github.com/webpack/extract-text-webpack-plugin/issues/265
-        loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: 'css-loader!sass-loader'
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader!sass-loader'
         })
       }
     ]
