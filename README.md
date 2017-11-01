@@ -1,6 +1,6 @@
-# Angular 2 Webpack
+# Angular Webpack
 
-An Angular 2 starter kit with [Webpack](https://webpack.github.io/)
+An Angular starter kit with [Webpack](https://webpack.github.io/)
 
 ## Getting Started
 
@@ -8,13 +8,13 @@ An Angular 2 starter kit with [Webpack](https://webpack.github.io/)
 * [Node](https://nodejs.org/) (>= 6.9.1)
 
 ### Setup
-1. `git clone https://github.com/bellizio/angular2-webpack.git`
-1. `cd angular2-webpack`
+1. `git clone https://github.com/bellizio/angular-webpack.git`
+1. `cd angular-webpack`
 1. `npm install`
 
 ## Overview
 
-This is an Angular 2 Webpack starter kit based on the official [Angular Webpack guide](https://angular.io/docs/ts/latest/guide/webpack.html). It includes everything detailed in the guide with a few modifications in order to incorporate the following:
+This is an Angular Webpack starter kit based on the official [Angular Webpack guide](https://angular.io/docs/ts/latest/guide/webpack.html). It includes everything detailed in the guide with a few modifications in order to incorporate the following:
 
 * [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement.html) (for development)
 * [Ahead-of-Time Compilation](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html) (for production)

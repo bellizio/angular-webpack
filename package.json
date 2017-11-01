@@ -1,12 +1,12 @@
 {
-  "name": "angular2-webpack",
+  "name": "angular-webpack",
   "version": "1.0.0",
-  "description": "Angular 2 with Webpack starter kit",
+  "description": "Angular Webpack starter kit",
   "author": "Devon Bellizio",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bellizio/angular2-webpack.git"
+    "url": "https://github.com/bellizio/angular-webpack.git"
   },
   "scripts": {
     "build:prod": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
