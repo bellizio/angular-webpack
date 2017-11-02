@@ -29,8 +29,10 @@ module.exports = {
   plugins: [
     // see https://github.com/angular/angular/issues/11580
     new webpack.ContextReplacementPlugin(
-      /angular(\\|\/)core(\\|\/)@angular/,
-      helpers.root('./src')
+      // The (\\|\/) piece accounts for path separators in *nix and Windows
+      /(.+)?angular(\\|\/)core(.+)?/,
+      helpers.root('./src'), // location of your src
+      {} // a map of your routes
     ),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']

@@ -18,17 +18,19 @@ module.exports = webpackMerge(commonConfig, {
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts)$/,
         use: '@ngtools/webpack',
         exclude: [/\.(spec|e2e)\.ts$/]
       },
       {
         test: /\.scss$/,
         include: helpers.root('src', 'assets', 'css'),
-        // use 'loader' syntax here, see: https://github.com/webpack/extract-text-webpack-plugin/issues/265
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: 'css-loader!sass-loader'
+          use: [
+            'css-loader',
+            'sass-loader'
+          ]
         })
       }
     ]
@@ -44,7 +46,7 @@ module.exports = webpackMerge(commonConfig, {
     new webpack.LoaderOptionsPlugin({
       options: {
         htmlLoader: {
-         minimize: false // workaround for ng2
+          minimize: false // workaround for ng2
         }
       }
     }),
@@ -54,7 +56,7 @@ module.exports = webpackMerge(commonConfig, {
         'ENV': JSON.stringify(ENV)
       }
     }),
-    new ngToolsWebpack.AotPlugin({
+    new ngToolsWebpack.AngularCompilerPlugin({
       tsConfigPath: helpers.root('tsconfig.json'),
       entryModule: helpers.root('src', 'app', 'app.module#AppModule'),
       mainPath: helpers.root('src', 'app', 'main.ts')
